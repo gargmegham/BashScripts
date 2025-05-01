@@ -59,6 +59,7 @@ fi
 
 # Clone the repository
 echo "Cloning repository..."
+git config credential.helper store
 if [ ! -d "$APP_DIR" ]; then
     git clone "$REPO_URL" "$APP_DIR"
     cd "$APP_DIR"
